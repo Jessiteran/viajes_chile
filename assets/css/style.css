@@ -2,14 +2,22 @@
 *{ 
         overflow-x: hidden;
 }
-/*smooth scroll con css*/
+/*smooth scroll*/
 html {
     scroll-behavior: smooth;
   }
 .avioncito{
     width: 1.5em;
 }
+.navbar-toggler{
+    border-color: #fff;
+}
 .letras{
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+#inicio{
     color: #fff;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
@@ -58,11 +66,12 @@ html {
 .colorfooter{
     background-color: #43B9D3;
     color: #fff;
+
 }
 .footer2{
     text-align: center;
     color: #fff;
-    font-size: 3em;
+    font-size: 2.5em;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
 }

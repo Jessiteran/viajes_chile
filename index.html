@@ -24,7 +24,7 @@
 <body>
   <nav class="navbar fixed-top navbar-expand-lg ">
     <div class="container-fluid">
-      <a class="navbar-brand ms-5 ps-5 letras" href="#"><img class="avioncito" src="assets/img/viajes.svg" alt="">
+      <a class="navbar-brand ms-5 ps-1 fs-3 letras" href="#"><img class="avioncito" src="assets/img/viajes.svg" alt="">
         Viajes Chile</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,22 +33,22 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto me-5 mp-5">
           <li class="nav-item">
-            <a class="nav-link active letras" aria-current="page" href="#">Inicio</a>
+            <a class="nav-link active letras fs-4" id="inicio" aria-current="page" href="#">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link letras d-none d-sm-block" href="#presentacion">Quienes Somos</a>
+            <a class="nav-link letras d-none d-sm-block fs-4" href="#presentacion">Quienes Somos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link letras" href="#destacados">Destacados</a>
+            <a class="nav-link letras fs-4" href="#destacados">Destacados</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link letras" href="#contacto">Contacto</a>
+            <a class="nav-link letras fs-4" href="#contacto">Contacto</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
- <!--Carrusel-->
+  <!--Carrusel-->
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -62,11 +62,11 @@
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="carousel-control-prev-icon d-none d-sm-block" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="carousel-control-next-icon d-none d-sm-block" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div>
@@ -106,7 +106,7 @@
       </div>
     </div>
   </div>
- <!--Cards-->
+  <!--Cards-->
   <div class="destacados" id="destacados">
     <div>
       <h2 class="titulos py-5">DESTACADOS</h2>
@@ -116,8 +116,8 @@
         <div class="card mx-auto" style="width: 18rem;">
           <img src="assets/img/card1.jpg" class="card-img-top" alt="destacado1">
           <div class="card-body">
-            <h5>Lorem ipsum, dolor sit amet </h5>
-            <p class="card-text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt est odit
+            <h5 id="card-title1">Lorem ipsum, dolor sit amet </h5>
+            <p class="card-text1"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt est odit
               dignissimos accusamus, consectetur</p>
           </div>
         </div>
@@ -126,8 +126,8 @@
         <div class="card mx-auto" style="width: 18rem;">
           <img src="assets/img/card2.jpg" class="card-img-top" alt="destacado2">
           <div class="card-body">
-            <h5>Lorem ipsum, dolor sit amet </h5>
-            <p class="card-text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt est odit
+            <h5 id="card-title2">Lorem ipsum, dolor sit amet </h5>
+            <p class="card-text2"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt est odit
               dignissimos accusamus, consectetur</p>
           </div>
         </div>
@@ -136,8 +136,8 @@
         <div class="card mx-auto" style="width: 18rem;">
           <img src="assets/img/card3.jpg" class="card-img-top" alt="destacado3">
           <div class="card-body">
-            <h5>Lorem ipsum, dolor sit amet </h5>
-            <p class="card-text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt est odit
+            <h5 id="card-title3">Lorem ipsum, dolor sit amet </h5>
+            <p class="card-text3"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt est odit
               dignissimos accusamus, consectetur</p>
           </div>
         </div>
@@ -146,8 +146,8 @@
         <div class="card mx-auto" style="width: 18rem;">
           <img src="assets/img/card4.jpg" class="card-img-top" alt="destacado4">
           <div class="card-body">
-            <h5>Lorem ipsum, dolor sit amet </h5>
-            <p class="card-text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt est odit
+            <h5 id="card-title4">Lorem ipsum, dolor sit amet </h5>
+            <p class="card-text4"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt est odit
               dignissimos accusamus, consectetur</p>
           </div>
         </div>
@@ -173,7 +173,8 @@
       <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
+    <button type="submit" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="right"
+      data-bs-title="Ingrese su correo en el mensaje para poder ser contactado" id="enviar">Enviar</button>
   </div>
   <footer>
     <div class="row py-4 colorfooter">
@@ -181,22 +182,24 @@
         <p class="colorfooter">VIAJES CHILE</p>
       </div>
       <div class="col-6 colorfooter footer2">
-        <a href="https://github.com/" target="_blank">  <i class="fa-brands fa-square-github px-2 colorfooter"></i></a>
+        <a href="https://github.com/" target="_blank"> <i class="fa-brands fa-square-github px-2 colorfooter"></i></a>
         <a href="https://www.linkedin.com" target="_blank"> <i class="fa-brands fa-linkedin px-2 colorfooter"></i></a>
-        <a href="https://www.facebook.com" target="_blank"> <i class="fa-brands fa-square-facebook px-2 colorfooter"></i></a>
-        <a href="https://twitter.com/?lang=es" target="_blank"> <i class="fa-brands fa-square-twitter px-2 colorfooter"></i></a>
+        <a href="https://www.facebook.com" target="_blank"> <i
+            class="fa-brands fa-square-facebook px-2 colorfooter"></i></a>
+        <a href="https://twitter.com/?lang=es" target="_blank"> <i
+            class="fa-brands fa-square-twitter px-2 colorfooter"></i></a>
       </div>
     </div>
   </footer>
 
-   <!--JavaScript-->
+  <!--JavaScript-->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
     crossorigin="anonymous"></script>
-     <!--Jquery-->
+  <!--Jquery-->
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="assets/js/main.js"></script>
