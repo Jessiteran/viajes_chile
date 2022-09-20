@@ -1,15 +1,13 @@
 $(document).ready(function(){
-        $("#card-title1").click(function(){
-            $(".card-text1").toggle()
+     /* Toggle de la sección quienes somos*/ 
+        $("#icono1").click(function(){
+            $("#texto1").toggle()
         })
-        $("#card-title2").click(function(){
-            $(".card-text2").toggle()
+        $("#icono2").click(function(){
+            $("#texto2").toggle()
         })
-        $("#card-title3").click(function(){
-            $(".card-text3").toggle()
-        })
-        $("#card-title4").click(function(){
-            $(".card-text4").toggle()
+        $("#icono3").click(function(){
+            $("#texto3").toggle()
         })
         /* Alerta que aparece cuando el usuario ingresa los datos de contacto y presionar el botón enviar*/ 
         $("#enviar").click(function(){
